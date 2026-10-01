@@ -8,7 +8,7 @@ export const site = {
   description:
     "Adisah African Store in Upper Marlboro, MD stocks African food items, provisions, fresh vegetables, frozen fish, turkey, chicken and household goods. Order on WhatsApp for doorstep delivery or visit us on Old Crain Hwy.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://adisahafricanstore.com", // TODO: confirm domain
-  email: "adisah@gmail.com",
+  email: "orders@adisahafricanstore.com", // Namecheap forwarding to the owner's Gmail
   phoneDisplay: "+1 (301) 543-7933",
   phoneE164: "+13015437933",
   whatsapp: "13015437933",
