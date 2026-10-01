@@ -39,16 +39,16 @@ export default function Home() {
       <section className="relative isolate overflow-hidden bg-ink text-cream">
         <HeroBackdrop />
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 pb-20 pt-14 sm:px-6 md:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-28">
-          <div className="reveal">
+          <div className="reveal [text-shadow:0_2px_16px_rgb(20_12_10_/_0.55)]">
             <p className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-medium text-gold">
               <PinIcon className="size-3.5" /> Upper Marlboro, Maryland
             </p>
             <h1 className="mt-6 font-display text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
               A taste of home,
               <br />
-              <span className="bg-gradient-to-r from-gold via-amber-300 to-ember bg-clip-text text-transparent">at your doorstep.</span>
+              <span className="bg-gradient-to-r from-gold via-amber-300 to-ember bg-clip-text text-transparent [text-shadow:none]">at your doorstep.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/70">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream/90">
               African food items, provisions, fresh vegetables, frozen fish, turkey and chicken. Send us your list on WhatsApp and we&apos;ll
               deliver it, or stop by the store on Old Crain Hwy.
             </p>

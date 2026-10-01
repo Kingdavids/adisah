@@ -12,8 +12,8 @@ export function HeroBackdrop() {
         </div>
       ))}
       {/* Warm wash keeps the headline readable over any photo */}
-      <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-ink/5" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/30" />
     </div>
   );
 }
