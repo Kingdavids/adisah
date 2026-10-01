@@ -69,21 +69,21 @@ export const categories: Category[] = [
     name: "Grains & Flours",
     blurb: "Garri, semolina, poundo yam, rice, beans and the swallows you grew up on.",
     items: ["Garri (white / yellow)", "Poundo yam flour", "Semolina", "Long grain rice", "Ofada rice", "Beans (honey / oloyin)", "Fufu flour", "Couscous"],
-    image: "/images/grains.webp",
+    image: "/images/flyer-grains.webp",
   },
   {
     slug: "vegetables",
     name: "Fresh Vegetables",
     blurb: "Plantain, yam, scotch bonnet, bitter leaf, ugu and seasonal produce.",
     items: ["Plantain", "Yam tubers", "Scotch bonnet pepper", "Bitter leaf", "Ugu (pumpkin leaf)", "Okra", "Garden eggs", "Cocoyam"],
-    image: "/images/vegetables.webp",
+    image: "/images/flyer-vegetables.webp",
   },
   {
     slug: "oils-spices",
     name: "Oils & Spices",
     blurb: "Red palm oil, groundnut oil, crayfish, egusi, pepper soup spice and more.",
     items: ["Red palm oil", "Groundnut oil", "Ground crayfish", "Egusi", "Ogbono", "Pepper soup spice", "Suya spice", "Iru / locust beans"],
-    image: "/images/spices.webp",
+    image: "/images/flyer-palm-oil.webp",
   },
   {
     slug: "fish",
@@ -111,7 +111,7 @@ export const categories: Category[] = [
     name: "Provisions & Pantry",
     blurb: "Golden Penny pasta, noodles, seasoning cubes, tomato paste and tins.",
     items: ["Golden Penny spaghetti", "Indomie noodles", "Maggi / Knorr cubes", "Tomato paste", "Custard", "Sardines & tinned fish", "Corned beef", "Cornflakes & oats"],
-    image: "/images/store.webp",
+    image: "/images/flyer-essentials.webp",
   },
   {
     slug: "drinks",

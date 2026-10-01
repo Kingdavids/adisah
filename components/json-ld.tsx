@@ -12,7 +12,7 @@ export function LocalBusinessJsonLd() {
     telephone: site.phoneE164,
     email: site.email,
     image: `${site.url}/opengraph-image`,
-    logo: `${site.url}/icon.svg`,
+    logo: `${site.url}/images/logo-full.png`,
     priceRange: "$",
     servesCuisine: ["Nigerian", "Ghanaian", "West African"],
     address: {

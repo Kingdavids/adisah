@@ -7,7 +7,7 @@ Hi! I've started on your new website using the details from your flyer. Please a
 1. ~~Opening hours~~ (confirmed: Mon to Sat 9am to 8pm, Sunday 2pm to 8pm)
 2. Is the address on the flyer right: 5436 Old Crain Hwy, Upper Marlboro, MD 20772? Is there a suite or unit number, or a landmark nearby that helps people find you?
 3. Is +1 (301) 543-7933 the number for both calls and WhatsApp? Who answers it?
-4. Is adisah@gmail.com the email you check most?
+4. Your two flyers show different emails: adisah@gmail.com and Adisah247@gmail.com. Which one do you check? (The website address orders@adisahafricanstore.com forwards there.)
 5. How long has the store been open? Is there a short story behind the name "Adisah" that you'd like on the site?
 
 ## Delivery and ordering

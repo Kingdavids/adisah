@@ -45,8 +45,8 @@ export default async function ReviewsPage() {
 
       {/* Printable counter card */}
       <div className="mx-auto mt-16 max-w-sm overflow-hidden rounded-[2rem] bg-white shadow-2xl ring-1 ring-ink/10 print:mt-0 print:shadow-none">
-        <div className="bg-ink px-6 py-6 text-cream">
-          <Logo />
+        <div className="flex justify-center bg-ink px-6 py-6 text-cream">
+          <Logo variant="full" className="w-36" />
         </div>
         <KenteBand className="h-2 w-full" />
         <div className="px-8 pb-8 pt-7 text-center">

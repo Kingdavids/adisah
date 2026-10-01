@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { site } from "@/lib/site";
 import { WhatsAppIcon } from "./icons";
@@ -55,7 +56,7 @@ export function WhatsAppDemo() {
       <div className="overflow-hidden rounded-[2.6rem] border-[10px] border-ink-2 bg-ink-2 shadow-2xl ring-1 ring-white/10">
         {/* Chat header */}
         <div className="flex items-center gap-3 bg-[#075e54] px-4 pb-3 pt-4 text-white">
-          <span className="grid size-9 place-items-center rounded-full bg-maroon font-display text-sm font-bold text-gold">A</span>
+          <Image src="/images/avatar.png" alt="" width={36} height={36} className="size-9 rounded-full" />
           <div className="leading-tight">
             <p className="text-sm font-semibold">{site.name}</p>
             <p className="text-[11px] text-white/70">{typing === "store" ? "typing…" : "online"}</p>
