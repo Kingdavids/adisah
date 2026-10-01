@@ -2,7 +2,7 @@
 
 Work through this in order. Some steps depend on earlier ones. Google Business Profile verification can take several days, so start it first.
 
-Set up every Google account under the store's own Gmail (adisah@gmail.com). Add yourself as a manager instead of the owner. That way the owner keeps control if you ever part ways.
+You never need the owner's Google password. Each Google tool lets you share access by email, so you work from your own account and the owner holds the Owner or Administrator role on everything. Invitations go to adisah@gmail.com, so first confirm that the owner actually reads that inbox.
 
 ## 1. Before anything else
 
@@ -13,7 +13,7 @@ Set up every Google account under the store's own Gmail (adisah@gmail.com). Add 
 
 ## 2. Google Business Profile and Maps
 
-1. [ ] Go to business.google.com while signed in as adisah@gmail.com
+1. [ ] Ask the owner to sign in at business.google.com on their phone, find or create the listing, then add your email under Business Profile settings > People and access with the Manager role. (Or create it from your account, then make the owner Primary owner and step down to Manager.)
 2. [ ] Search for "Adisah African Store" first. If a listing already exists, claim it instead of creating a second one
 3. [ ] Business name: Adisah African Store, exactly as on the sign. Adding keywords to the name breaks Google's rules and can get the listing suspended
 4. [ ] Primary category: African Grocery Store. Secondary categories: Grocery store, Meat products store, Frozen food store
@@ -59,14 +59,16 @@ The site is hosted on Railway. Railway runs `npm run build` and then `npm start`
 
 1. [ ] Go to search.google.com/search-console and add a **Domain** property. Verify it with the DNS TXT record at the domain registrar
    - If DNS access is hard to get, use a **URL prefix** property with the HTML tag method, and paste the `content` value into `NEXT_PUBLIC_GSC_VERIFICATION`
-2. [ ] Submit `https://yourdomain.com/sitemap.xml` under Sitemaps
-3. [ ] Use URL Inspection on the home page and click **Request indexing**
-4. [ ] Paste the home page into search.google.com/test/rich-results and check that GroceryStore and FAQ show up with no errors
+2. [ ] Under Settings > Users and permissions, add the owner's email with Owner permission
+3. [ ] Submit `https://yourdomain.com/sitemap.xml` under Sitemaps
+4. [ ] Use URL Inspection on the home page and click **Request indexing**
+5. [ ] Paste the home page into search.google.com/test/rich-results and check that GroceryStore and FAQ show up with no errors
 
 ## 6. Google Analytics 4 and conversion tracking
 
 1. [ ] Create a GA4 property at analytics.google.com. Set the time zone to Eastern and the currency to USD
 2. [ ] Add a Web data stream for the domain and copy the Measurement ID (`G-XXXXXXXXXX`) into `NEXT_PUBLIC_GA_ID`, then redeploy
+   - Under Admin > Property access management, add the owner's email as Administrator
 3. [ ] Open the site, click each button, and check under Reports > Realtime that these events come in:
 
    | Event | Fires when |
