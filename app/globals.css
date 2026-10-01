@@ -49,9 +49,39 @@ body {
   to { opacity: 1; transform: none; }
 }
 
+/* Hero photos: 4 slides, 6s each, slow cross-fade with a gentle zoom */
+.hero-slide {
+  opacity: 0;
+  animation: hero-slide 24s linear infinite both;
+}
+@keyframes hero-slide {
+  0% { opacity: 0; transform: scale(1); }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  32% { opacity: 0; transform: scale(1.06); }
+  100% { opacity: 0; transform: scale(1.06); }
+}
+
+/* WhatsApp demo */
+.chat-pop {
+  animation: chat-pop 0.35s cubic-bezier(0.2, 0.8, 0.2, 1.2) both;
+}
+@keyframes chat-pop {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.typing-dot {
+  animation: typing 1s ease-in-out infinite;
+}
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-3px); opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { animation: none; }
+  .reveal, .chat-pop, .typing-dot, .hero-slide { animation: none; }
+  .hero-slide:first-child { opacity: 1; }
 }
 
 @media print {

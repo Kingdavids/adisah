@@ -58,51 +58,73 @@ export type Category = {
   name: string;
   blurb: string;
   items: string[];
-  tone: string; // tailwind gradient classes
+  image: string; // under /public
 };
 
 // Product examples are typical for a West African grocer. TODO: owner to confirm best sellers.
+// Photos are stand-ins until the owner sends real store photos.
 export const categories: Category[] = [
   {
     slug: "grains",
     name: "Grains & Flours",
-    blurb: "Garri, semolina, poundo yam, rice and the swallows you grew up on.",
+    blurb: "Garri, semolina, poundo yam, rice, beans and the swallows you grew up on.",
     items: ["Garri (white / yellow)", "Poundo yam flour", "Semolina", "Long grain rice", "Ofada rice", "Beans (honey / oloyin)", "Fufu flour", "Couscous"],
-    tone: "from-amber-300 to-orange-500",
-  },
-  {
-    slug: "provisions",
-    name: "Provisions & Pantry",
-    blurb: "Golden Penny pasta, noodles, seasoning cubes, tomato paste, tins and drinks.",
-    items: ["Golden Penny spaghetti", "Indomie noodles", "Maggi / Knorr cubes", "Tomato paste", "Milo", "Peak milk", "Custard", "Malt drinks"],
-    tone: "from-yellow-300 to-amber-500",
-  },
-  {
-    slug: "oils-spices",
-    name: "Oils & Spices",
-    blurb: "Red palm oil, groundnut oil, crayfish, ogiri, pepper soup spice and more.",
-    items: ["Red palm oil", "Groundnut oil", "Ground crayfish", "Egusi", "Ogbono", "Pepper soup spice", "Suya spice", "Iru / locust beans"],
-    tone: "from-red-400 to-rose-700",
-  },
-  {
-    slug: "frozen",
-    name: "Frozen Fish & Meat",
-    blurb: "Titus, croaker, stockfish, turkey wings, chicken and goat meat.",
-    items: ["Titus (mackerel)", "Croaker", "Stockfish", "Dried catfish", "Turkey wings", "Whole chicken", "Goat meat", "Shaki / cow foot"],
-    tone: "from-sky-300 to-blue-600",
+    image: "/images/grains.webp",
   },
   {
     slug: "vegetables",
     name: "Fresh Vegetables",
     blurb: "Plantain, yam, scotch bonnet, bitter leaf, ugu and seasonal produce.",
     items: ["Plantain", "Yam tubers", "Scotch bonnet pepper", "Bitter leaf", "Ugu (pumpkin leaf)", "Okra", "Garden eggs", "Cocoyam"],
-    tone: "from-lime-300 to-emerald-600",
+    image: "/images/vegetables.webp",
+  },
+  {
+    slug: "oils-spices",
+    name: "Oils & Spices",
+    blurb: "Red palm oil, groundnut oil, crayfish, egusi, pepper soup spice and more.",
+    items: ["Red palm oil", "Groundnut oil", "Ground crayfish", "Egusi", "Ogbono", "Pepper soup spice", "Suya spice", "Iru / locust beans"],
+    image: "/images/spices.webp",
+  },
+  {
+    slug: "fish",
+    name: "Fish & Seafood",
+    blurb: "Titus, croaker, tilapia, stockfish, dried catfish and shrimp.",
+    items: ["Titus (mackerel)", "Croaker", "Tilapia", "Stockfish", "Dried catfish", "Smoked fish", "Shrimp", "Panla (hake)"],
+    image: "/images/fish.webp",
+  },
+  {
+    slug: "poultry",
+    name: "Poultry & Meat",
+    blurb: "Whole chicken, turkey wings, goat meat, shaki and cow foot.",
+    items: ["Whole chicken", "Chicken wings", "Turkey wings", "Turkey drumsticks", "Goat meat", "Beef", "Shaki (tripe)", "Cow foot"],
+    image: "/images/poultry.webp",
+  },
+  {
+    slug: "frozen",
+    name: "Frozen Foods",
+    blurb: "Frozen greens, okra, gizzards, snails and ready-to-cook favourites.",
+    items: ["Frozen okra", "Frozen ugu & greens", "Frozen mixed vegetables", "Frozen gizzards", "Frozen snails", "Frozen peeled yam", "Frozen cassava leaves", "Frozen fufu"],
+    image: "/images/frozen.webp",
+  },
+  {
+    slug: "provisions",
+    name: "Provisions & Pantry",
+    blurb: "Golden Penny pasta, noodles, seasoning cubes, tomato paste and tins.",
+    items: ["Golden Penny spaghetti", "Indomie noodles", "Maggi / Knorr cubes", "Tomato paste", "Custard", "Sardines & tinned fish", "Corned beef", "Cornflakes & oats"],
+    image: "/images/store.webp",
+  },
+  {
+    slug: "drinks",
+    name: "Drinks",
+    blurb: "Malt drinks, Milo, Peak milk, zobo, juices and soft drinks.",
+    items: ["Malt drinks", "Milo", "Peak milk", "Zobo (hibiscus)", "Ginger drink", "Fruit juices", "Soft drinks", "Bottled water"],
+    image: "/images/drinks.webp",
   },
   {
     slug: "household",
     name: "Household Essentials",
     blurb: "Soaps, cleaning supplies, black soap, shea butter and everyday home items.",
-    items: ["African black soap", "Shea butter", "Detergent", "Sponges", "Cooking pots", "Mortar & pestle", "Toiletries", "Kitchen towels"],
-    tone: "from-fuchsia-300 to-purple-600",
+    items: ["African black soap", "Shea butter", "Detergent", "Sponges", "Tissue & paper towels", "Mortar & pestle", "Toiletries", "Cooking pots"],
+    image: "/images/household.webp",
   },
 ];

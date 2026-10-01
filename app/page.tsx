@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { categories, fmtTime, fullAddress, links, site } from "@/lib/site";
+import { HeroBackdrop } from "@/components/hero-backdrop";
+import { WhatsAppDemo } from "@/components/whatsapp-demo";
 import { ArrowIcon, ClockIcon, KenteBand, MailIcon, PhoneIcon, PinIcon, StarIcon, TruckIcon, WhatsAppIcon } from "@/components/icons";
 
 const faqs = [
@@ -33,9 +36,8 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* HERO */}
-      <section className="grain relative isolate overflow-hidden bg-ink text-cream">
-        <div aria-hidden className="absolute -right-40 -top-40 -z-10 size-[42rem] rounded-full bg-maroon/70 blur-3xl" />
-        <div aria-hidden className="absolute -bottom-52 -left-32 -z-10 size-[30rem] rounded-full bg-ember/25 blur-3xl" />
+      <section className="relative isolate overflow-hidden bg-ink text-cream">
+        <HeroBackdrop />
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 pb-20 pt-14 sm:px-6 md:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-28">
           <div className="reveal">
             <p className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-medium text-gold">
@@ -86,32 +88,9 @@ export default function Home() {
             </dl>
           </div>
 
-          {/* Visual: basket of aisles */}
-          <div className="reveal relative mx-auto w-full max-w-md [animation-delay:150ms]">
-            <div className="absolute inset-0 -z-10 rounded-[3rem] bg-gradient-to-br from-gold/30 via-ember/20 to-transparent blur-2xl" />
-            <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.04] p-4 backdrop-blur">
-              <div className="grid grid-cols-2 gap-3">
-                {categories.slice(0, 4).map((c, i) => (
-                  <div
-                    key={c.slug}
-                    className={`relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-3xl bg-gradient-to-br ${c.tone} p-4 text-ink ${i % 2 ? "translate-y-6" : ""}`}
-                  >
-                    <span className="absolute right-3 top-3 font-display text-5xl font-black opacity-15">0{i + 1}</span>
-                    <p className="text-[11px] font-semibold uppercase tracking-widest opacity-70">{c.items.length}+ items</p>
-                    <p className="font-display text-xl font-bold leading-tight">{c.name}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-9 flex items-center gap-3 rounded-2xl bg-ink/60 p-3">
-                <span className="grid size-10 place-items-center rounded-xl bg-wa text-ink">
-                  <WhatsAppIcon />
-                </span>
-                <div className="text-sm">
-                  <p className="font-semibold">&ldquo;2 bags of garri, 1 palm oil, 3 titus&rdquo;</p>
-                  <p className="text-cream/50">Just send your list. We handle the rest.</p>
-                </div>
-              </div>
-            </div>
+          {/* Visual: looping WhatsApp order demo */}
+          <div className="reveal [animation-delay:150ms]">
+            <WhatsAppDemo />
           </div>
         </div>
         <KenteBand className="h-2 w-full" />
@@ -153,28 +132,39 @@ export default function Home() {
           {categories.map((c) => (
             <article
               key={c.slug}
-              className="group relative overflow-hidden rounded-3xl border border-ink/10 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group flex flex-col overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className={`absolute -right-10 -top-10 size-36 rounded-full bg-gradient-to-br ${c.tone} opacity-80 blur-sm transition group-hover:scale-110`} />
-              <h3 className="relative font-display text-2xl font-bold">{c.name}</h3>
-              <p className="relative mt-2 text-sm leading-relaxed text-ink/65">{c.blurb}</p>
-              <ul className="relative mt-5 flex flex-wrap gap-1.5">
-                {c.items.slice(0, 6).map((i) => (
-                  <li key={i} className="rounded-full bg-sand px-2.5 py-1 text-xs text-ink/80">
-                    {i}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={links.whatsapp(`Hello Adisah, do you have these in stock from ${c.name}? `)}
-                target="_blank"
-                rel="noopener"
-                data-track="whatsapp_click"
-                data-track-location={`category_${c.slug}`}
-                className="relative mt-6 inline-flex items-center gap-2 text-sm font-semibold text-maroon"
-              >
-                <WhatsAppIcon className="size-4" /> Ask about {c.name.split(" ")[0].toLowerCase()}
-              </a>
+              <div className="relative aspect-[4/3] overflow-hidden bg-sand">
+                <Image
+                  src={c.image}
+                  alt={`${c.name} at Adisah African Store`}
+                  fill
+                  sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/60 to-transparent" />
+                <h3 className="absolute bottom-4 left-5 font-display text-2xl font-bold text-cream drop-shadow">{c.name}</h3>
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <p className="text-sm leading-relaxed text-ink/65">{c.blurb}</p>
+                <ul className="mt-4 flex flex-wrap gap-1.5">
+                  {c.items.slice(0, 5).map((i) => (
+                    <li key={i} className="rounded-full bg-sand px-2.5 py-1 text-xs text-ink/80">
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={links.whatsapp(`Hello Adisah, do you have these in stock from ${c.name}? `)}
+                  target="_blank"
+                  rel="noopener"
+                  data-track="whatsapp_click"
+                  data-track-location={`category_${c.slug}`}
+                  className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-maroon"
+                >
+                  <WhatsAppIcon className="size-4" /> Ask about {c.name.toLowerCase()}
+                </a>
+              </div>
             </article>
           ))}
         </div>
