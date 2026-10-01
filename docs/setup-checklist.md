@@ -60,7 +60,7 @@ The site is hosted on Railway. Railway runs `npm run build` and then `npm start`
 1. [ ] Go to search.google.com/search-console and add a **Domain** property. Verify it with the DNS TXT record at the domain registrar
    - If DNS access is hard to get, use a **URL prefix** property with the HTML tag method, and paste the `content` value into `NEXT_PUBLIC_GSC_VERIFICATION`
 2. [ ] Under Settings > Users and permissions, add the owner's email with Owner permission
-3. [ ] Submit `https://yourdomain.com/sitemap.xml` under Sitemaps
+3. [ ] Under Sitemaps, submit the full address `https://adisahafricanstore.com/sitemap.xml`. A Domain property rejects the short form `sitemap.xml`
 4. [ ] Use URL Inspection on the home page and click **Request indexing**
 5. [ ] Paste the home page into search.google.com/test/rich-results and check that GroceryStore and FAQ show up with no errors
 
